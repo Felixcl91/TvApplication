@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">TvApplication</string>
+    <string name="item_image">Imagen de item</string>
+    <string name="minutes">minutos</string>
+    <string name="title_recommendations">Recomendaciones</string>
+    <string name="search">Buscar</string>
+</resources>

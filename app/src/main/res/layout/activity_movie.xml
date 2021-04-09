@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.movie.view.MovieActivity"
+    android:background="@color/black">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar_movie"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/blue"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:visibility="gone">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageButton
+                android:id="@+id/return_main"
+                android:layout_width="30dp"
+                android:layout_height="35dp"
+                android:background="@drawable/ic_baseline_keyboard_arrow_left_24"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="80dp"
+                android:layout_height="45dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/films"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/return_main"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar_movie">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/image_movie_back"
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:background="@color/black_effective"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+            <ImageView
+                android:id="@+id/movie_image"
+                android:layout_width="75dp"
+                android:layout_height="100dp"
+                android:layout_margin="20dp"
+                android:background="@drawable/ic_launcher_foreground"
+                app:layout_constraintBottom_toBottomOf="@+id/image_movie_back"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:visibility="gone"/>
+            <TextView
+                android:id="@+id/movie_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/black_effective"
+                android:fontFamily="@font/arial_nova_cond_style"
+                android:gravity="center"
+                android:padding="5dp"
+                android:textColor="@color/white"
+                app:layout_constraintTop_toBottomOf="@+id/image_movie_back"
+                tools:text="Colt 45"
+                />
+            <LinearLayout
+                android:id="@+id/ly_first"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/teal_200"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/movie_name"
+                android:orientation="horizontal"/>
+
+            <LinearLayout
+                android:id="@+id/linearLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="vertical"
+                app:layout_constraintTop_toBottomOf="@+id/ly_first">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/black_effective"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/movie_year"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10dp"
+                        android:fontFamily="@font/arial_nova_cond_style"
+                        android:padding="5dp"
+                        android:textColor="@color/white"
+                        tools:text="Año" />
+
+                    <TextView
+                        android:id="@+id/movie_genre"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginRight="10dp"
+                        android:fontFamily="@font/arial_nova_cond_style"
+                        android:padding="5dp"
+                        android:textColor="@color/white"
+                        tools:text="Genero" />
+
+                    <TextView
+                        android:id="@+id/movie_time"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginRight="10dp"
+                        android:fontFamily="@font/arial_nova_cond_style"
+                        android:padding="5dp"
+                        android:textColor="@color/white"
+                        tools:text="80 minutos" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/teal_200" />
+
+                <TextView
+                    android:id="@+id/movie_desc"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/black_effective"
+                    android:fontFamily="@font/arial_nova_cond_style"
+                    android:padding="5dp"
+                    android:textColor="@color/white"
+                    tools:text="Vincent Miles es un experto instructor de tiro de la Policia Nacional. Con solo 25 años recibe ofertas para formar parte de los cuerpos de élite del gobierno, pero prefiere conservar la integridad de su trabajo. Un día conoce al agente Milo Cardena que, sin saberlo, lo arrastra a un infernal remolino de violencia en medio de una guerra interna de la policía. Sin saber cómo manejar la situación, Vicent se verá obligado a matar para salvar su vida." />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/title_rec"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/black_effective"
+                android:fontFamily="@font/arial_nova_cond_style"
+                android:gravity="center"
+                android:padding="5dp"
+                android:textColor="@color/white"
+                app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+                android:text="@string/title_recommendations"
+                />
+
+
+            <LinearLayout
+                android:id="@+id/ly_rec"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/teal_200"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/title_rec"
+                android:orientation="horizontal" />
+
+            <ProgressBar
+                android:id="@+id/progressBarMovie"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ly_rec"
+                android:layout_marginTop="200dp"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recycler_rec"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@+id/ly_rec"
+                tools:listitem="@layout/item_recommendations"
+                android:visibility="gone"/>
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
