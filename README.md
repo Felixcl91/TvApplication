@@ -1,5 +1,7 @@
 # MVVM Architecture Android Beginners: Sample App
 
+<img align="right" src="https://raw.githubusercontent.com/Felixcl91/TvApplication/master/assets/movies.jpg" width="200">
+
 This repository contains a sample app that implements MVVM architecture using Kotlin, ViewModel, LiveData, Retrofit.
 
 #### The app has following packages:
